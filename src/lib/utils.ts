@@ -17,7 +17,10 @@ export function resolveAssetUrl(url: string) {
   ) {
     return url
   }
-  const base = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080"
+  const base =
+    process.env.NEXT_PUBLIC_API_BASE_URL ??
+    process.env.NEXT_PUBLIC_API_URL ??
+    "http://localhost:8080"
   if (url.startsWith("/")) {
     return `${base}${url}`
   }
