@@ -119,7 +119,7 @@ export type NovelChapterStat = {
   latestChapterId: number;
 };
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8081";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://api.malazscans.my.id";
 const ADMIN_API_KEY = process.env.NEXT_PUBLIC_ADMIN_API_KEY ?? "";
 
 async function getErrorMessage(response: Response, fallback: string) {
